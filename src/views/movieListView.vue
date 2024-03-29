@@ -60,6 +60,7 @@
 
 
 <script>
+import "@/assets/movieList.css"
 
 export default {
     name: "movieListView",
@@ -73,31 +74,4 @@ export default {
 </script>
 
 
-<style>
-h1{
-    margin-left: 465px;
-}
-
-table:not(img){
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td{
-    border: 1px solid black;
-}
-
-img{
-    width: 80px;
-    height: 100px;
-    float: left;
-}
-
-.title{
-    text-align: left;
-    line-height: 95px;
-}
-</style>
+<style></style>

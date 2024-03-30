@@ -1,8 +1,9 @@
 h1{
-    margin-left: 465px;
+    margin-left: 483px;
 }
 
-table:not(img){
+table:not(#moviePoster, #ageImg){
+    width: 550px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -14,10 +15,15 @@ th, td{
     border: 1px solid black;
 }
 
-img{
+#moviePoster{
+    position: relative;
     width: 80px;
     height: 100px;
     float: left;
+}
+
+#ageImg{
+    position: absolute;
 }
 
 .title{

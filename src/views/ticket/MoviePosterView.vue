@@ -16,8 +16,9 @@
 
 <script>
 import axios from 'axios';
+
 export default {
-    name: "AttachView",
+    name: "MoviePosterView",
     components: {},
     data() {
         return {};

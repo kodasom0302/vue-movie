@@ -1,17 +1,25 @@
+#m-title{
+    margin-bottom: 20px;
+}
+
 table:not(#img-movie){
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
+    font-size: medium;
+    /*background-color: rgb(252, 208, 225);*/
 }
 
-th, td{
-    border: 1px solid black;
+th{
+    /*background-color: #f1d1d2;*/
+    background-color: rgb(148, 39, 49);
+    color: white;
+    /*border-bottom: 1px solid #c1a3a3;*/
 }
 
-#mNo{
-    width: 30px;
+th:first-child{
+    /*border-right: 1px solid #c1a3a3;*/
 }
 
 #img-movie{
@@ -21,17 +29,27 @@ th, td{
 }
 
 #mName{
+    width: 500px;
     text-align: left;
     line-height: 95px;
-    width: 500px;
+    font-weight: bold;
+    /*border-right: 1px solid #c1a3a3;*/
 }
 
-#mTime{
-    width: 80px;
+#mInfo{
+    width: 150px;
+    /*border-bottom: 1px solid #c1a3a3;*/
 }
 
-#mSeats{
-    width: 50px;
+.space{
+    padding: 3px;
+    /*border-right: 1px solid #c1a3a3;*/
+}
+
+.space2{
+    padding: 3px;
+    border-top: 1px solid rgb(98, 40, 42);
+    /*border-right: 1px solid #c1a3a3;*/
 }
 
 #return-button {
@@ -49,4 +67,3 @@ th, td{
   #return-button:hover {
     background-color: #0056b3;
   }
-

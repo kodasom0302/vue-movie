@@ -15,36 +15,33 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>번호</th>
                                 <th>제목</th>
-                                <th>상영시간</th>
-                                <th>잔여석</th>
+                                <th>상영시간 / 잔여석</th>
                             </tr>
                         </thead>
                             <tbody v-bind:key="i" v-for="(movieVo, i) in mList">
                                 <tr>
-                                    <td id="mNo">{{ movieVo.mNo }}</td>
+                                    <td class="space2" colspan="2"></td>
+                                </tr>
+                                <tr>
                                     <td id="mName">
-                                        <img src="@/assets/img/코난.jpg" id="img-movie">
+                                        <img v-bind:src="`http://localhost:9000/upload/${movieVo.saveName}`" id="img-movie">
                                         <img src="@/assets/img/12.svg">
                                         {{ movieVo.mName }}
                                     </td>
-                                    <td id="mTime">{{ movieVo.mTicketing }}</td>
-                                    <td id="mSeats">
+                                    <td id="mInfo">
+                                        {{ movieVo.mTicketing }}
                                         <ModalView v-if="isModalViewed" @close-modal="isModalViewed = false">
                                             <SeatContentView></SeatContentView>
                                         </ModalView>
                                         <button @click="isModalViewed = true">{{ movieVo.mRemarks }}</button>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="space" colspan="2"></td>
+                                </tr>
                             </tbody>
                     </table>
-                            
-
-                    <div class="clearfix"></div>
-                    <div>
-                        <router-link to="/" id="return-button" >돌아가기</router-link>
-                    </div>
 
 
 
@@ -99,7 +96,8 @@ export default {
                 mNo:"",
                 mName:"",
                 mTicketing:"",
-                mRemarks:""
+                mRemarks:"",
+                saveName:"",
             }
         };
     },

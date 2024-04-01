@@ -1,0 +1,52 @@
+table:not(#img-movie){
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid black;
+}
+
+#mNo{
+    width: 30px;
+}
+
+#img-movie{
+    width: 80px;
+    height: 100px;
+    float: left;
+}
+
+#mName{
+    text-align: left;
+    line-height: 95px;
+    width: 500px;
+}
+
+#mTime{
+    width: 80px;
+}
+
+#mSeats{
+    width: 50px;
+}
+
+#return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: #e70c0c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #return-button:hover {
+    background-color: #0056b3;
+  }
+

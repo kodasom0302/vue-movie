@@ -14,7 +14,7 @@
                     <div>
                         <div id="app">
                             <div id="input-container">
-                                <input type="text" v-model="hp" placeholder="010-0000-0000">
+                                <input type="text" v-model="hp" placeholder="핸드폰 번호를 입력해 주세요">
                                 <button id="search-button" onclick="location.href='/endpoint'">적립하기</button>
                             </div>
 
@@ -58,6 +58,7 @@
 
 
 <script>
+import "@/assets/css/FindView.css"
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
 

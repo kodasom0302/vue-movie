@@ -12,11 +12,14 @@
 
 
                     <div>
-                        <h1>포인트 사용 방식</h1>
+                        <h1 id="title">포인트 사용 방식</h1>
 
-                        <p id="title">뭐라고 할까ㅏ</p>
+                        <p id="subTitle">뭐라고 할까ㅏ</p>
 
-                        <button id="AddPoint" onclick="location.href='/addpoint'">적립</button>
+                        <button id="AddPoint" onclick="location.href='/addpoint'">
+                            <img id="img" src="@/assets/img/addPoint.png">
+                            적립
+                        </button>
 
                         <!--
                         <ModalView v-if="isModalViewed" @close-modal="isModalViewed = false">
@@ -24,8 +27,11 @@
                         </ModalView>
                         <button id="btnNo" @click="isModalViewed = true">사용</button>
                         -->
-
-                        <button id="UsePoint">사용</button>
+                        
+                        <button id="UsePoint" onclick="location.href='/addpoint'">
+                            <img id="img" src="@/assets/img/usePoint.png">
+                            사용
+                        </button>
                     </div>
 
 

@@ -5,6 +5,10 @@ import FoodStoreView from '@/views/foodstore/FoodStoreView.vue'
 import TicketView from '@/views/ticket/TicketView.vue'
 import PaymentCheckView from '@/views/payment/PaymentCheckView.vue'
 import MoviePosterView from '@/views/ticket/MoviePosterView.vue'
+import ChoosePointView from '@/views/point/ChoosePointView.vue'
+import PlusPointView from '@/views/point/PlusPointView.vue'
+import EndPointView from '@/views/point/EndPointView.vue'
+import TestView from '@/views/ticket/TestView.vue'
 
 const routes = [
   {
@@ -33,11 +37,30 @@ const routes = [
     name: '/payment/paymentform',
     component: PaymentCheckView
   },
-
   {
     path: '/ticket/poster',
     name: '/ticket/poster',
     component: MoviePosterView
+  },
+  {
+    path: '/point',
+    name: '/point',
+    component: ChoosePointView
+  },
+  {
+    path: '/addpoint',
+    name: '/addpoint',
+    component: PlusPointView
+  },
+  {
+    path: '/endpoint',
+    name: '/endpoint',
+    component: EndPointView
+  },
+  {
+    path: '/test/test',
+    name: '/test/test',
+    component: TestView
   },
   
 ]

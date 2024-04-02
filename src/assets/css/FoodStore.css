@@ -1,0 +1,101 @@
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center; 
+}
+
+#content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#content .view {
+    width: calc(33.33% - 50px);
+    height: 220px;
+    margin: 5px 0px 60px 3px;
+    float: left;
+}
+
+#content .img {
+    width: 100%; 
+    height: auto; 
+    cursor: pointer;
+}
+
+#content .imgWriter {
+    font-size: 16px; 
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+#foodmenu {
+    width: 600px;
+    padding-left: 70px;
+}
+
+
+#cart {
+    display: inline-block;
+    border: 3px solid #ff4d4d;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 800px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+#cart div:last-child {
+    margin-top: auto;
+}
+
+#viewArea {
+    width: 700px;
+}
+
+.pay {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.pay:hover {
+    background-color: #ff3333;
+}
+
+#return-button {
+    margin-top: 100px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #e70c0c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #return-button:hover {
+    background-color: #0056b3;
+  }
+
+.plusminus {
+    background-color: #f0f0f0; /* 연한 회색 배경색 */
+    border: none;
+    border-radius: 50%;
+    width: 25px; /* 너비 */
+    height: 25px; /* 높이 */
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+}
+   

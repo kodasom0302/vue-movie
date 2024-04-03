@@ -21,6 +21,8 @@
                             <ModalView v-if="isModalViewed" @close-modal="isModalViewed = false">
                                 <PaymentContentView></PaymentContentView>
                             </ModalView>
+
+                            
                             <div class="payment-method" @click="isModalViewed = true">
                                 <img id="card" src="@/assets/img/card.png">카드 결제</div>
                             <div class="payment-method" @click="isModalViewed = true">

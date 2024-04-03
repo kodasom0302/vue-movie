@@ -157,7 +157,7 @@ export default {
         });
         
     },
-    */
+    *//*
     getOneTime(movieVo.m_no) {
       console.log("리스트 가져오기");
       console.log(this.no);
@@ -180,7 +180,7 @@ export default {
           console.log(error);
         });
         
-    },
+    },*/
     
     
   },

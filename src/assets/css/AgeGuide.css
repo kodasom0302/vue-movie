@@ -1,0 +1,53 @@
+#yearolds{
+    border: 2px solid #ff4343;
+    border-radius: 25px;
+    width: 350px;
+    padding: 30px 15px 27px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 250px 570px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#yearolds2{
+    border: 2px solid #ff4343;
+    border-radius: 25px;
+    width: 350px;
+    padding: 30px 17px 27px 17px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 248px 565px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#text{
+    width: 20px;
+    margin-top: 3px;
+}
+
+#text2{
+    width: 20px;
+    margin-top: 3px;
+}
+
+#agree{
+    display: inline-block;
+    margin: 30px 0px 10px 0px;
+    padding: 10px 20px;
+    background-color: #ff4343;
+    border: #ffffff;
+    border-radius: 7px;
+    color: #ffffff;
+}
+
+#agree2{
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
+    padding: 10px 20px;
+    background-color: #ff4343;
+    border: #ffffff;
+    border-radius: 7px;
+    color: #ffffff;
+}

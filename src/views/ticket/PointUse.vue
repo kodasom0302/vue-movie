@@ -20,7 +20,7 @@
                         </div>
                         <div id="check-btn">
                             <ModalView v-if="isModalViewed" @close-modal="isModalViewed = false">
-                                <PointCheckContentView></PointCheckContentView>
+                                <PointCheckContent2View></PointCheckContent2View>
                             </ModalView>
                             <button id="check-button" @click="isModalViewed=true">포인트조회</button>
                         </div>
@@ -58,7 +58,7 @@ import "@/assets/css/PointUse.css";
 import AppHeader from "@/components/AppHeader.vue"
 import AppFooter from "@/components/AppFooter.vue"
 import ModalView from "@/components/ModalView.vue";
-import PointCheckContentView from "@/components/PointCheckContentView.vue";
+import PointCheckContent2View from "@/components/PointCheckContent2View.vue";
 
 export default {
     name: "PointUse",
@@ -66,7 +66,7 @@ export default {
         AppHeader,
         AppFooter,
         ModalView,
-        PointCheckContentView,
+        PointCheckContent2View,
     },
     data() {
         return {

@@ -3,7 +3,7 @@ import MainView from '@/views/main/MainView.vue'
 import FindView from '@/views/find/FindView.vue'
 import FoodStoreView from '@/views/foodstore/FoodStoreView.vue'
 import TicketView from '@/views/ticket/TicketView.vue'
-import PaymentCheckView from '@/views/payment/PaymentCheckView.vue'
+import PaymentCheck2View from '@/views/payment/PaymentCheck2View.vue'
 import MoviePosterView from '@/views/ticket/MoviePosterView.vue'
 import TestView from '@/views/ticket/TestView.vue'
 import SlideView from '@/views/slide/SlideView.vue'
@@ -49,7 +49,7 @@ const routes = [
   {
     path: '/payment/paymentform',
     name: 'PaymentCheckView',
-    component: PaymentCheckView
+    component: PaymentCheck2View
   },
   {
     path: '/ticket/poster',

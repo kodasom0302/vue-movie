@@ -21,6 +21,7 @@
                     <img
                       v-bind:src="`http://localhost:9000/upload/${movieVo.saveName}`"
                       id="img-movie"
+                      + {{ movieVo.m_age }} 추가
                     />
                   -->
                   <img src="../../assets/img/파묘.jpg" id="img-movie" />
@@ -99,6 +100,7 @@ export default {
         m_ticketing: "",
         m_remarks: "",
         saveName: "",
+        m_age: ""
       },
       timeVo: {
         m_no: "",

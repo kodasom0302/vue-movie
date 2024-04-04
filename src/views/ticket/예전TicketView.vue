@@ -21,29 +21,18 @@
                     <img
                       v-bind:src="`http://localhost:9000/upload/${movieVo.saveName}`"
                       id="img-movie"
-                      + {{ movieVo.m_age }} 추가
                     />
                   -->
                   <img src="../../assets/img/파묘.jpg" id="img-movie" />
                     <img src="@/assets/img/12.svg" />
-                      {{ movieVo.m_name }}
+                      {{ movieVo.m_name }}({{ movieVo.m_no }})
                   </td>
 
                   <!-- 상영시간 for 문 -->
                   <td>
                     <div>
-                      <div v-bind:key="i" v-for="(timeVo, i) in tList">
-                        {{ timeVo.s_date }}
-                        <ModalView
-                          v-if="isModalViewed"
-                          @close-modal="isModalViewed = false"
-                        >
-                          <SeatContentView></SeatContentView>
-                        </ModalView>
-                        <button @click="isModalViewed = true">
-                          {{ movieVo.m_remarks }}좌석
-                        </button>
-
+                      <div v-on:click="getOneTime(movieVo.m_no)">
+                        상영시간
                       </div>
                     </div>
                   </td>
@@ -52,6 +41,15 @@
                   <td id="mInfo">
                     <!-- 좌석버튼 for문 -->
                     <div id="seat_btn">
+                      <ModalView
+                        v-if="isModalViewed"
+                        @close-modal="isModalViewed = false"
+                      >
+                        <SeatContentView></SeatContentView>
+                      </ModalView>
+                      <button @click="isModalViewed = true">
+                        {{ movieVo.m_remarks }}좌석
+                      </button>
                     </div>
 
 
@@ -93,18 +91,12 @@ export default {
     return {
       isModalViewed: false,
       mList: [],
-      tList: [],
       movieVo: {
         m_no: "",
         m_name: "",
         m_ticketing: "",
         m_remarks: "",
         saveName: "",
-        m_age: ""
-      },
-      timeVo: {
-        m_no: "",
-        s_date: "",
       },
       count: "",
       m_no: this.m_no
@@ -127,13 +119,14 @@ export default {
         .then((response) => {
           //console.log(response.data.apiData); //수신데이타
           this.mList = response.data.apiData;
+          //console.log(this.mList[0].m_no);
         })
         .catch((error) => {
           console.log(error);
         });
         
     },
-    
+    /*
     getTimeList() {
       console.log("리스트 가져오기");
 
@@ -149,39 +142,52 @@ export default {
         .then((response) => {
           //console.log(response.data.apiData); //수신데이타
           this.tList = response.data.apiData;
+          // for(let iwanttogohome=0, index<this.mList.length; index++){
+          //   console.log(this.mList[index].m_no);
+          // }
+          //console.log(this.mList[].m_no);
+          
+          // for (let index = 0; index < this.tList.length; index++) {
+          //   console.log(this.tList[index].m_no);
+          // }
+
         })
         .catch((error) => {
           console.log(error);
         });
         
     },
-    
-    getOneTime(m_no) {
-            console.log(m_no);
-            axios({
-                method: 'get', // put, post, delete 
-                url: 'http://localhost:9000/api/movie/movieonetime',
-                headers: { "Content-Type": "application/json; charset=utf-8" }, //전송타입
-                // params: guestbookVo, //get방식 파라미터로 값이 전달
-                data: {m_no}, //put, post, delete 방식 자동으로 JSON으로 변환 전달
+    *//*
+    getOneTime(movieVo.m_no) {
+      console.log("리스트 가져오기");
+      console.log(this.no);
 
-                responseType: 'json' //수신타입
-            }).then(response => {
-                console.log(response.data); //수신데이타
-                //this.getList();
+      axios({
+        method: "get", // put, post, delete
+        url: "http://localhost:9000/api/movie/movieonetime",
+        headers: { "Content-Type": "application/json; charset=utf-8" }, //전송타입
+        //params: guestbookVo, //get방식 파라미터로 값이 전달
+        data: this.no, //put, post, de    lete 방식 자동으로 JSON으로 변환 전달
 
-            }).catch(error => {
-                console.log(error);
-
-            });
-
-        }
+        responseType: "json", //수신타입
+      })
+        .then((response) => {
+          console.log(response.data.apiData); //수신데이타
+          
+          this.tList = response.data.apiData;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+        
+    },*/
     
     
   },
   created() {
     this.getList();
-    this.getTimeList();
+    //this.getTimeList();
+    //this.getOneTime();
   },
 };
 </script>
